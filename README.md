@@ -60,7 +60,7 @@ returns the required employee data
 
 ## Screenshots
 
-![App Screenshot](/Ganapathi-devop/village-talkies-assignment/blob/master/public/finalprj-screenshot.jp)
+![App Screenshot](https://user-images.githubusercontent.com/79808587/206453146-1974632c-c698-4089-bfd0-e3156cf4094a.jpg)
 
 
 ## Packages
