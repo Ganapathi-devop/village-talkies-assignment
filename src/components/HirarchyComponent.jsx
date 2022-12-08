@@ -17,7 +17,9 @@ function HirarchyComponent({ employeeList }) {
       if (defaultListItem.employeeId === listItem.managerId) {
         managers.add(defaultListItem);
       }
+      return null
     });
+    return null
   });
   for (let i = 0; i < managers.size; i++) {
     let arr = [];
@@ -29,6 +31,7 @@ function HirarchyComponent({ employeeList }) {
       if (managersArr[i].employeeId === listItem.managerId) {
         arr.push(listItem);
       }
+      return null
     });
     masterTreeData[managersArr[i].employeeId] = arr;
   }
@@ -55,11 +58,12 @@ function HirarchyComponent({ employeeList }) {
   let result = {};
   var finalArr = [];
   list.map((item, index) => {
-    if (item.employeeId == arr[arr.length - 1]) {
+    if (item.employeeId === arr[arr.length - 1]) {
       result = item;
       result.child = obj;
       finalArr.push(result);
     } 
+    return null
   });
   objTree.current = finalArr;
 
