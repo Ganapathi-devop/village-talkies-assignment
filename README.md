@@ -72,3 +72,5 @@ To run this project, you will need to add the following variables to your app
 ##### Syncfusion Node Package
 For `TreeViewComponent`  and the mapping  
 
+## Figma Design
+https://www.figma.com/file/QpERDLvJyevLPzzzFVlHLx/Village-talkies-assignment?node-id=0%3A1&t=gZr3X0ljTk8Aftjz-0
