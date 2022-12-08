@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo
 
-## Available Scripts
+# https://village-talkies-assignment.vercel.app/
 
-In the project directory, you can run:
 
-### `npm start`
+# Employee Hirarchiy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A brief description of what this project does 
+## Frontend Assignment from village talkies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Build a page that allows the user to visualise and update an employee organization chart 
+interactively with drag & drop. 
+### Data Model: 
+- Employee: 
+- ID
+- Name
+- Designation
+- Team
+- Manager - (points to another employee’s ID)
 
-### `npm test`
+### Expected User Interface: 
+On the left, show a list of employees pulled from an API endpoint. For each employee, show the 
+name, designation, team on the list item. This list should have a search box to type and jump to 
+an employee by any of the properties as well as a dropdown filter to filter the list of employees 
+by a specific team.
+When I use the left sidebar filter to filter the list by a specific team, only show the chart for those 
+employees. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+On the right side of the screen, based on the entire list of employees, generate a tree like chart 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Reference
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Api Url:
+#### https://6b466d85-2421-4d6f-a9dc-5a0e6d78bb07.mock.pstmn.io
+#### Get all items
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+  GET /listOfEmployee
+```
 
-### `npm run eject`
+| Parameter | Type     | 
+| :-------- | :------- | 
+| `none` | `string` | 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Get item
+```
+GET /Employee
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Parameter | Type     | 
+| :-------- | :------- | 
+| `none` | `string` | 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+returns the required employee data 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![App Screenshot](/Ganapathi-devop/village-talkies-assignment/blob/master/public/finalprj-screenshot.jp)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Packages
 
-### Analyzing the Bundle Size
+To run this project, you will need to add the following variables to your app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`API_KEY` `Axios` `Mui`
 
-### Making a Progressive Web App
+##### Syncfusion Node Package
+For `TreeViewComponent`  and the mapping  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
