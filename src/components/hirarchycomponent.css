@@ -1,0 +1,9 @@
+.body-hirarchy-comp{
+    width: 60%;
+    max-width: 60%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.body-hirarchy-comp span{
+    font-size: 1.5rem !important;
+}

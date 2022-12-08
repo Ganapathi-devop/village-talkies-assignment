@@ -1,0 +1,3 @@
+
+export const LOAD_SUCCESS = 'REDUX_THUNK_LOAD_SUCCESS';
+export const LOAD_ERROR = 'REDUX_THUNK_LOAD_ERROR';

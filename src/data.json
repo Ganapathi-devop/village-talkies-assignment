@@ -1,0 +1,67 @@
+{
+    "employee": [
+    {
+    "name": "John",
+    "designation": "Trainee",
+    "team": "Team",
+    "employeeId": 12345,
+    "managerId": 12346
+    },
+    {
+    "name": "Jack",
+    "designation": "Junior Dev",
+    "team": "Team",
+    "employeeId": 12346,
+    "managerId": 12348
+    },
+    {
+    "name": "Raj",
+    "designation": "Junior Dev",
+    "team": "Team",
+    "employeeId": 12347,
+    "managerId": 12348
+    },
+    {
+    "name": "Rose",
+    "designation": "Senior Dev",
+    "team": "Team",
+    "employeeId": 12348,
+    "managerId": 12349
+    },
+    {
+    "name": "Michel",
+    "designation": "Manager",
+    "team": "Team",
+    "employeeId": 12349,
+    "managerId": null
+    },
+    {
+    "name": "Emli",
+    "designation": "Trainee",
+    "team": "Team",
+    "employeeId": 12350,
+    "managerId": 12346
+    },
+    {
+    "name": "Peter",
+    "designation": "Trainee",
+    "team": "Team",
+    "employeeId": 12351,
+    "managerId": 12346
+    },
+    {
+    "name": "Tony",
+    "designation": "Trainee",
+    "team": "Team",
+    "employeeId": 12352,
+    "managerId": 12347
+    },
+    {
+    "name": "Kamal",
+    "designation": "Trainee",
+    "team": "Team",
+    "employeeId": 12353,
+    "managerId": 12347
+    }
+    ]
+    }
