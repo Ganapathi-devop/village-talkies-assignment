@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 // import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import EmployeeListDiv from "./EmployeeListDiv";
 import "./listcomponent.css";
 

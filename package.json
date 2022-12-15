@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.10.16",
     "@mui/lab": "^5.0.0-alpha.111",
     "@mui/material": "^5.10.17",
+    "@reduxjs/toolkit": "^1.9.1",
     "@syncfusion/ej2-react-dropdowns": "^20.3.60",
     "@syncfusion/ej2-react-grids": "^20.3.60",
     "@syncfusion/ej2-react-navigations": "^20.3.60",

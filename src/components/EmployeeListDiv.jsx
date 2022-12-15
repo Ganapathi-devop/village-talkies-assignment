@@ -5,7 +5,11 @@ import EmployeeCardDiv from "./EmployeeCardDiv";
 function EmployeeListDiv({ employeeList, filtered }) {
   const store = useStore();
   const employeeListHandle = (list) => {
-    store.dispatch({ type: LOAD_SUCCESS, employeeList: list });
+    console.log(list)
+    const newState = [ ...list ]
+    console.log(newState);
+    store.dispatch({ type: LOAD_SUCCESS, employeeList: newState });
+    console.log(store.getState());
     return list.map((item) => {
       return <EmployeeCardDiv employee={item} />;
     });

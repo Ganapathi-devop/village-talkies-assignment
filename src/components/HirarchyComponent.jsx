@@ -1,14 +1,16 @@
-import React, { useRef } from "react";
-import "./hirarchycomponent.css";
 import { enableRipple } from "@syncfusion/ej2-base";
-import { useStore } from "react-redux";
 import { TreeViewComponent } from "@syncfusion/ej2-react-navigations";
+import React, { useRef } from "react";
+import { useStore } from "react-redux";
+import "./hirarchycomponent.css";
 enableRipple(true);
 
 function HirarchyComponent({ employeeList }) {
   const store = useStore();
   var employee = store.getState();
   var list = employee.employeeList;
+  console.log(list);
+  console.log(employeeList);
   const objTree = useRef();
   var masterTreeData = {};
   var managers = new Set();
@@ -17,10 +19,11 @@ function HirarchyComponent({ employeeList }) {
       if (defaultListItem.employeeId === listItem.managerId) {
         managers.add(defaultListItem);
       }
-      return null
+      return null;
     });
-    return null
+    return null;
   });
+  console.log(managers);
   for (let i = 0; i < managers.size; i++) {
     let arr = [];
     let managersArr = [];
@@ -31,14 +34,36 @@ function HirarchyComponent({ employeeList }) {
       if (managersArr[i].employeeId === listItem.managerId) {
         arr.push(listItem);
       }
-      return null
+      return null;
     });
     masterTreeData[managersArr[i].employeeId] = arr;
   }
+  console.log(masterTreeData);
 
   var arr = Object.keys(masterTreeData);
+  console.log(arr);
   var iteration = 0;
   let obj = {};
+  var finalArr = [];
+  const managerAdder = () => {
+    let result = {};
+    list.map((item, index) => {
+      console.log("managerAdder");
+      var employeeId = arr[arr.length - 1]
+      if (item.employeeId === parseInt(employeeId) ) {
+        console.log(item);
+        result = item;
+        result.child = obj;
+        console.log(result);
+        finalArr.push(result);
+        console.log(finalArr);
+      }
+
+      return null;
+    });
+    objTree.current = finalArr;
+    console.log(objTree.current);
+  };
   const managerHandleFun = (manager) => {
     obj = masterTreeData[manager];
     iteration = iteration + 1;
@@ -51,21 +76,15 @@ function HirarchyComponent({ employeeList }) {
     }
     if (iteration < arr.length) {
       managerHandleFun(arr[iteration]);
+    } else {
+      managerAdder();
     }
   };
   let a = arr[0];
   managerHandleFun(a);
-  let result = {};
-  var finalArr = [];
-  list.map((item, index) => {
-    if (item.employeeId === arr[arr.length - 1]) {
-      result = item;
-      result.child = obj;
-      finalArr.push(result);
-    } 
-    return null
-  });
-  objTree.current = finalArr;
+  console.log(obj);
+
+  console.log(finalArr);
 
   let fields = {
     dataSource: objTree.current,
@@ -75,6 +94,8 @@ function HirarchyComponent({ employeeList }) {
     hasChildren: "hasChild",
   };
   let allowDragAndDrop = true;
+  console.log(objTree.current);
+  console.log(fields);
   return (
     <div className="body-hirarchy-comp">
       {/*  specifies the tag for render the TreeView component */}

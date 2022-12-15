@@ -16,8 +16,8 @@ function App() {
     rootReducer,
     window._REDUXDEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION_(),
     applyMiddleware(thunk)
-  );
-  useEffect(() => {
+    );
+    useEffect(() => {
     axios
       .get(APIURL)
       .then((res) => {
